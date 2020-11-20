@@ -32,7 +32,7 @@ function isAuthenticated({email, password}){
 }
 
 // Register New User
-/*
+
 server.post('/auth/register', (req, res) => {
   console.log("register endpoint called; request body:");
   console.log(req.body);
@@ -44,7 +44,6 @@ server.post('/auth/register', (req, res) => {
     res.status(status).json({status, message});
     return
   }
-*/
 
 fs.readFile("./users.json", (err, data) => {  
     if (err) {
