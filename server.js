@@ -12,9 +12,9 @@ server.use(bodyParser.urlencoded({extended: true}))
 server.use(bodyParser.json())
 server.use(jsonServer.defaults());
 
-const SECRET_KEY = '123456789'
+const SECRET_KEY = 'EF6DC91F7BD9981387A3CFE6A1474'
 
-const expiresIn = '1h'
+const expiresIn = '24h'
 
 // Create a token from a payload 
 function createToken(payload){
@@ -32,6 +32,7 @@ function isAuthenticated({email, password}){
 }
 
 // Register New User
+/*
 server.post('/auth/register', (req, res) => {
   console.log("register endpoint called; request body:");
   console.log(req.body);
@@ -43,6 +44,7 @@ server.post('/auth/register', (req, res) => {
     res.status(status).json({status, message});
     return
   }
+*/
 
 fs.readFile("./users.json", (err, data) => {  
     if (err) {
